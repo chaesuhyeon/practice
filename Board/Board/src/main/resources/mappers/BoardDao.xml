@@ -12,4 +12,8 @@
     <insert id="write">
         INSERT INTO board (boardName, boardTitle, boardContent) VALUES (#{ param1 }, #{ param2 }, #{ param3 });
     </insert>
+
+    <select id="viewDto" resultType="com.board.dto.BoardDto">
+        select * from board where boardId = #{param1}
+    </select>
 </mapper>

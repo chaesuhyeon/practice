@@ -9,4 +9,6 @@ import java.util.List;
 public interface IBoardDao {
     public List<BoardDto> list();
     public int write(String boardName, String boardTitle, String boardContent );
+
+    public BoardDto viewDto(String boardId);
 }

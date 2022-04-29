@@ -51,4 +51,16 @@ public class MyController {
         return "redirect:/listForm"; // 글 생성하면 게시글 list로 redirect
     }
 
+
+
+    @RequestMapping("/contentForm")
+    public String contentForm(@RequestParam("boardId") String boardId,
+                              Model model)
+    {
+        BoardDto dto = boardDao.viewDto(boardId);
+        model.addAttribute("dto", dto);
+        System.out.println(dto);
+        return "contentForm"; // contentForm.jsp 디스패치
+    }
+
 } 
