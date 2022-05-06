@@ -56,6 +56,8 @@ public class MyController {
     @RequestMapping("/contentForm")
     public String contentForm(@RequestParam("boardId") String boardId,
                               Model model) {
+
+        boardDao.hit(boardId); // 조회수 증가
         BoardDto dto = boardDao.viewDto(boardId);
         model.addAttribute("dto", dto);
         System.out.println(dto);

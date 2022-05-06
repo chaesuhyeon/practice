@@ -17,9 +17,10 @@
              text-align: center;
          }
     </style>
+
 </head>
 <body>
-    <h2>게시글 목록</h2>
+    <h2>게시글 목록</h2> </br>
     <table width = "500" cellpadding="0" border="1">
         <tr>
             <th>번호</th>
@@ -53,6 +54,17 @@
         <tr>
             <td colspan="5"> <a href="writeForm">글 작성</a></td>
         </tr>
+
     </table>
+
+    <script>
+        <%-- 웹브라우저 back키 누를 때 패이지 재로딩 --%>
+        window.onpageshow=function (event) {
+            if (event.persisted) {
+                document.location.reload();
+            }
+        };
+    </script>
+
 </body>
 </html>

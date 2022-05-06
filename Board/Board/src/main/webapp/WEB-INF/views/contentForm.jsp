@@ -13,7 +13,8 @@
     <table width="500" cellpadding="0" border="1">
 
         <input type="hidden" name="boardId" value="${dto.boardId}"/>
-<%--        <input type="hidden" name="boardName" value="${dto.boardName}"/>--%>
+
+    <%--        <input type="hidden" name="boardName" value="${dto.boardName}"/>--%>
 
         <tr>
             <td>번호</td>
@@ -53,6 +54,27 @@
 
     </table>
 </form>
+
+    <br>
+
+    <table width="500" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <th>별명</th>
+            <th>내용</th>
+            <th>날짜</th>
+            <th>삭제</th>
+        </tr>
+
+        <tr>
+            <th>홍길동</th>
+            <th>댓글내용</th>
+            <th>2021-01-10</th>
+            <td><a href="deleteCommentAction?commentId=${comment_dto.commentId}"><button>삭제</button></a></td>
+        </tr>
+
+    </table>
+
+
 <script>
     <%--alert("${dto.boardContent}");--%>
 </script>

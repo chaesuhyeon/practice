@@ -24,4 +24,8 @@
     <delete id="deleteDto">
         delete from board where boardId=#{param1}
     </delete>
+
+    <update id="hit">
+        update board set boardHit=boardHit+1 where boardId=#{param1}
+    </update>
 </mapper>
