@@ -5,6 +5,8 @@
         "http://mybatis.org.dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.board.dao.IBoardDao" >
+<!--<mapper namespace="com.Board.dao.IBoardDao" >-->
+
     <select  id="list" resultType="com.board.dto.BoardDto">
         select * from board order by boardDate desc
     </select>

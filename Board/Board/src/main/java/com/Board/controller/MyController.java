@@ -1,5 +1,7 @@
 package com.board.controller;
 
+import com.Board.dao.ICommentDao;
+import com.Board.dto.CommentDto;
 import com.board.dao.IBoardDao;
 import com.board.dto.BoardDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class MyController {
 
     @Autowired
     IBoardDao boardDao;
+
+    @Autowired
+    ICommentDao commentDao;
 
     @RequestMapping("/")
     public String root() {
@@ -58,9 +63,16 @@ public class MyController {
                               Model model) {
 
         boardDao.hit(boardId); // 조회수 증가
+        
+        // 게시글 보기
         BoardDto dto = boardDao.viewDto(boardId);
         model.addAttribute("dto", dto);
-        System.out.println(dto);
+
+        // 댓글 보기
+        List<CommentDto> comment_list = commentDao.comment_list(boardId);
+        model.addAttribute("comment_list", comment_list);
+
+
         return "contentForm"; // contentForm.jsp 디스패치
     }
 

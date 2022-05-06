@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mabatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org.dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.board.dao.ICommentDao" >
+    <select  id="comment_list" resultType="com.board.dto.CommentDto">
+        select * from comment where commentBoardId=#{param1} order by commentDate desc
+    </select>
+
+    <insert id="comment_write">
+        INSERT INTO comment (commentName, commentContent, commentBoardId) VALUES (#{ param1 }, #{ param2 }, #{ param3 });
+    </insert>
+
+
+    <delete id="comment_deleteDto">
+        delete from comment where commentId=#{param1}
+    </delete>
+
+</mapper>

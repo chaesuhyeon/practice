@@ -57,6 +57,20 @@
 
     <br>
 
+<form action="writeComment" method="post">
+    <table width="500" cellpadding="0" cellspacing="0" border="1">
+        <tr>
+            <td colspan="2">
+                <label>댓글</label><textarea rows="2" cols="50" name="commentContent"></textarea><br>
+                <label>별명</label><input type="text" name="commentName" value="">
+                <input type="submit" value="댓글달기">
+            </td>
+        </tr>
+    </table>
+</form>
+
+    <br>
+
     <table width="500" cellpadding="0" cellspacing="0" border="1">
         <tr>
             <th>별명</th>
@@ -65,13 +79,14 @@
             <th>삭제</th>
         </tr>
 
+        <c:forEach var="comment_dto" items="${comment_list}">
         <tr>
-            <th>홍길동</th>
-            <th>댓글내용</th>
-            <th>2021-01-10</th>
+            <th>${comment_dto.commentName}</th>
+            <th>${comment_dto.commentContent}</th>
+            <th>${comment_dto.commentDate}</th>
             <td><a href="deleteCommentAction?commentId=${comment_dto.commentId}"><button>삭제</button></a></td>
         </tr>
-
+        </c:forEach>
     </table>
 
 
