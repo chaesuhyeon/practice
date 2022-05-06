@@ -13,7 +13,7 @@
     <table width="500" cellpadding="0" border="1">
 
         <input type="hidden" name="boardId" value="${dto.boardId}"/>
-        <input type="hidden" name="boardName" value="${dto.boardName}"/>
+<%--        <input type="hidden" name="boardName" value="${dto.boardName}"/>--%>
 
         <tr>
             <td>번호</td>

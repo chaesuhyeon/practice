@@ -16,4 +16,12 @@
     <select id="viewDto" resultType="com.board.dto.BoardDto">
         select * from board where boardId = #{param1}
     </select>
+
+    <update id="updateDto">
+        update board set boardName=#{param2}, boardTitle=#{param3}, boardContent=#{param4} where boardId=#{param1}
+    </update>
+
+    <delete id="deleteDto">
+        delete from board where boardId=#{param1}
+    </delete>
 </mapper>

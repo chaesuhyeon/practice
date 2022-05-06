@@ -11,4 +11,8 @@ public interface IBoardDao {
     public int write(String boardName, String boardTitle, String boardContent );
 
     public BoardDto viewDto(String boardId);
+
+    public int updateDto(String boardId,String boardName,String boardTitle,String boardContent);
+
+    public int deleteDto(String boardId);
 }
