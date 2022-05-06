@@ -1,4 +1,4 @@
-package com.Board.dto;
+package com.board.dto;
 
 import lombok.Data;
 

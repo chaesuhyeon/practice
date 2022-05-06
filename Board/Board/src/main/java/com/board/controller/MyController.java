@@ -1,7 +1,7 @@
 package com.board.controller;
 
-import com.Board.dao.ICommentDao;
-import com.Board.dto.CommentDto;
+import com.board.dao.ICommentDao;
+import com.board.dto.CommentDto;
 import com.board.dao.IBoardDao;
 import com.board.dto.BoardDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +18,7 @@ public class MyController {
 
     @Autowired
     IBoardDao boardDao;
+
 
     @Autowired
     ICommentDao commentDao;

@@ -2,6 +2,7 @@ package com.board.dao;
 
 import com.board.dto.BoardDto;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.context.annotation.Primary;
 
 import java.util.List;
 

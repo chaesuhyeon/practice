@@ -10,7 +10,7 @@
     </select>
 
     <insert id="comment_write">
-        INSERT INTO comment (commentName, commentContent, commentBoardId) VALUES (#{ param1 }, #{ param2 }, #{ param3 });
+        INSERT INTO comment (commentName, commentContent, commentBoardId) VALUES (#{ param1 }, #{ param2 }, #{ param3 })
     </insert>
 
 

@@ -1,6 +1,6 @@
-package com.Board.dao;
+package com.board.dao;
 
-import com.Board.dto.CommentDto;
+import com.board.dto.CommentDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
