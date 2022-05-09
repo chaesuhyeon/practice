@@ -9,7 +9,7 @@ import java.util.List;
 public interface ICommentDao {
     public List<CommentDto> comment_list(String commentBoardId);
 
-    public int comment_write(String commentName, String commentContent, String commentBoardId);
+    public int comment_write(String commentContent, String commentName, String commentBoardId);
 
-    public int comment_deleteDto(String commentId);
+    public int comment_deleteDto(String commentId, String boardId);
 }

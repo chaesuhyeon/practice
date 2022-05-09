@@ -57,16 +57,19 @@
 
     <br>
 
-<form action="writeComment" method="post">
+<form action="writeCommentAction" method="post">
     <table width="500" cellpadding="0" cellspacing="0" border="1">
         <tr>
             <td colspan="2">
+                <%-- 무슨 글의 댓글인지 게시글 index hidden으로 넘겨줌 --%>
+                <input type="hidden" name="commentBoardId" value="${dto.boardId}">
                 <label>댓글</label><textarea rows="2" cols="50" name="commentContent"></textarea><br>
                 <label>별명</label><input type="text" name="commentName" value="">
                 <input type="submit" value="댓글달기">
             </td>
         </tr>
     </table>
+
 </form>
 
     <br>
@@ -84,7 +87,7 @@
             <th>${comment_dto.commentName}</th>
             <th>${comment_dto.commentContent}</th>
             <th>${comment_dto.commentDate}</th>
-            <td><a href="deleteCommentAction?commentId=${comment_dto.commentId}"><button>삭제</button></a></td>
+            <td><a href="deleteCommentAction?commentId=${comment_dto.commentId}&boardId=${dto.boardId}"><button>삭제</button></a></td>
         </tr>
         </c:forEach>
     </table>
