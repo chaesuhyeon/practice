@@ -84,8 +84,9 @@
 
         <c:forEach var="comment_dto" items="${comment_list}">
         <tr>
-            <th>${comment_dto.commentName}</th>
             <th>${comment_dto.commentContent}</th>
+            <th>${comment_dto.commentName}</th>
+<%--            <th>${comment_dto.commentContent}</th>--%>
             <th>${comment_dto.commentDate}</th>
             <td><a href="deleteCommentAction?commentId=${comment_dto.commentId}&boardId=${dto.boardId}"><button>삭제</button></a></td>
         </tr>

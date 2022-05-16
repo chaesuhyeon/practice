@@ -13,7 +13,7 @@
 
          }
 
-         td,h2 {
+         td,h2{
              text-align: center;
          }
     </style>
@@ -52,7 +52,12 @@
         </c:forEach>
 
         <tr>
-            <td colspan="5"> <a href="writeForm">글 작성</a></td>
+<%--            <td colspan="5"> <a href="writeForm">글 작성</a></td>--%>
+            <td>
+                <a href="writeForm"><input type="button" value="글 작성"></a>
+            </td>
+
+<%--            <td><button type="button" onclick="location.href='http://localhost:8080/writeAction'">글 작성</button></td>--%>
         </tr>
 
     </table>
